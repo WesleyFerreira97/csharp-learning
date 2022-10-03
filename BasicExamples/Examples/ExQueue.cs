@@ -8,10 +8,36 @@ namespace BasicExamples.Examples
 {
     internal class ExQueue
     {
-
-        public void Test()
+        private Queue<string> nameQueue = new Queue<string>();
+        
+        public void AddQueue(string name)
         {
-            Console.WriteLine("Teste"); 
+            nameQueue.Enqueue(name);
+
+            Console.WriteLine($"Added {name}");
+        }
+
+        public void RemoveQueue()
+        {
+            string dequeueObject = nameQueue.Dequeue();
+
+            Console.WriteLine($"Removed : {dequeueObject}");
+        }
+
+        public void GetAllItems()
+        {
+            foreach (var item in nameQueue)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        public bool QueueContains(string itemName)
+        {
+            bool itemContains = nameQueue.Contains(itemName);
+
+
+            return itemContains;
         }
     }
 }

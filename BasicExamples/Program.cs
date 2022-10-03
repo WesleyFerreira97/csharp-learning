@@ -1,9 +1,16 @@
 ﻿using BasicExamples.Examples;
 
+//ExProps RickSanchez = new ExProps();
+//RickSanchez.Name = "Rick Sanchez";
+//Console.WriteLine(RickSanchez.Name);
 
+// Example Queue
+ExQueue namesQueue = new ExQueue();
+namesQueue.GetAllItems();
+namesQueue.AddQueue("Wesley");
+namesQueue.AddQueue("Juliana");
+namesQueue.AddQueue("Pedro");
 
-Character RickSanchez = new Character();
-
-RickSanchez.Name = "Rick Sanchez";
-
-Console.WriteLine(RickSanchez.Name);
+namesQueue.GetAllItems();
+namesQueue.RemoveQueue();
+Console.WriteLine(namesQueue.QueueContains("Wesley"));
