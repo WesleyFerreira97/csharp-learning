@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using BasicExamples.Examples;
+
+
+
+Character RickSanchez = new Character();
+
+RickSanchez.Name = "Rick Sanchez";
+
+Console.WriteLine(RickSanchez.Name);
