@@ -37,3 +37,10 @@
 
 //bool checkContains = person.HashContains("888.555.444.32");
 //Console.WriteLine($"Contém Item {checkContains}");
+
+
+// Example Tuple
+//ExTuple personTuple = new ExTuple();
+//personTuple.Ex1();
+//personTuple.Ex2();
+//personTuple.Ex3();

@@ -21,8 +21,6 @@ namespace BasicExamples.Examples
             {
                 Console.WriteLine("Element already exists");
             }
-
-            
         }
 
         public void RemoveHash(string removeKey)
@@ -44,6 +42,5 @@ namespace BasicExamples.Examples
 
             return itemContains;
         }
-
     }
 }
