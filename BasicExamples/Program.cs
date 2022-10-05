@@ -1,4 +1,6 @@
 ﻿using BasicExamples.Examples;
+using Newtonsoft.Json;
+using System.IO;
 
 //ExProps RickSanchez = new ExProps();
 //RickSanchez.Name = "Rick Sanchez";
@@ -64,3 +66,22 @@
 //(string name, string lastName) = propsDeconstruct;
 //Console.WriteLine(name);
 //Console.WriteLine(lastName);
+
+// Example Sereialize Json
+List<ExSerializeJson> productList = new List<ExSerializeJson>();
+
+ExSerializeJson product1 = new ExSerializeJson(2525, "SSD", 480.50M);
+ExSerializeJson product2 = new ExSerializeJson(2525, "Placa de Video", 1980.50M);
+ExSerializeJson product3 = new ExSerializeJson(2525, "Monitor", 2580.50M);
+ExSerializeJson product4 = new ExSerializeJson(2525, "Processador", 1970.20M);
+
+productList.Add(product1);
+productList.Add(product2);
+productList.Add(product3);
+productList.Add(product4);
+
+string serialize = JsonConvert.SerializeObject(productList, Formatting.Indented);
+
+File.WriteAllText("Archives/sales.json", serialize);
+
+Console.WriteLine(serialize);
