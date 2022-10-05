@@ -40,12 +40,27 @@
 
 
 // Example Tuple
-ExTuple personTuple = new ExTuple();
+//ExTuple personTuple = new ExTuple();
 //personTuple.Ex1();
 //personTuple.Ex2();
 //personTuple.Ex3();
 // A declaração do var permite delega a responsabilidade da tipagem aos parametros da tupla
-var (Name, LastName, AgeRenomeado) = personTuple.ReturnTypeTuple();
-Console.WriteLine(Name);
-Console.WriteLine(LastName);
-Console.WriteLine(AgeRenomeado);
+//var (Name, LastName, AgeRenomeado) = personTuple.ReturnTypeTuple();
+//Console.WriteLine(Name);
+//Console.WriteLine(LastName);
+//Console.WriteLine(AgeRenomeado);
+
+// Tupla com descartes - Permite pegar apenas o retorno necessário
+// utilizando no lugar do parametro um _
+//var (NameRenomeado, _, Age) = personTuple.ReturnTypeTuple();
+//Console.WriteLine(Name);
+//Console.WriteLine(Age);
+
+// Example Deconstruct
+//ExDeconstruct propsDeconstruct = new ExDeconstruct("Wesley", "Ferreira");
+//propsDeconstruct.GetAllProps();
+
+//Desconstruct method
+//(string name, string lastName) = propsDeconstruct;
+//Console.WriteLine(name);
+//Console.WriteLine(lastName);
