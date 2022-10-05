@@ -15,6 +15,7 @@ namespace BasicExamples.Examples
     {
         public void Ex1()
         {
+            // Opção mais recomendada
             // Este tipo de tupla pode ter seus valores renomeados
             (string Name, string LastName, int Age) people =
             ("Wesley", "Ferreira", 25);
@@ -40,6 +41,13 @@ namespace BasicExamples.Examples
             Console.WriteLine(outraPessoa.Item1);
             Console.WriteLine(outraPessoa.Item2);
             Console.WriteLine(outraPessoa.Item3);
+        }
+
+        //C# 7
+        //Tupla em tipagem de retorno
+        public (string Name, string LastName, int Age) ReturnTypeTuple()
+        {
+            return ("Wesley", "Ferreira", 25);
         }
     }
 }

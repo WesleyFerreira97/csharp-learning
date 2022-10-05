@@ -40,7 +40,12 @@
 
 
 // Example Tuple
-//ExTuple personTuple = new ExTuple();
+ExTuple personTuple = new ExTuple();
 //personTuple.Ex1();
 //personTuple.Ex2();
 //personTuple.Ex3();
+// A declaração do var permite delega a responsabilidade da tipagem aos parametros da tupla
+var (Name, LastName, AgeRenomeado) = personTuple.ReturnTypeTuple();
+Console.WriteLine(Name);
+Console.WriteLine(LastName);
+Console.WriteLine(AgeRenomeado);
