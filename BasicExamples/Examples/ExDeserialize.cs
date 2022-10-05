@@ -6,19 +6,11 @@ using System.Threading.Tasks;
 
 namespace BasicExamples.Examples
 {
-    internal class ExSerializeJson
+    internal class ExDeserialize
     {
         public int Id { get; set; }
         public string Product { get; set; }
         public decimal Price { get; set; }
         public DateTime DateSale { get; set; }
-
-        public ExSerializeJson(int id, string product, decimal price, DateTime dateSale)
-        {
-            Id = id;
-            Product = product;
-            Price = price;
-            DateSale = dateSale;
-        }
     }
 }

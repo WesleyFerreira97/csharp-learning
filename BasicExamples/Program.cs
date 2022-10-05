@@ -68,12 +68,13 @@ using System.IO;
 //Console.WriteLine(lastName);
 
 // Example Sereialize Json
+DateTime currentDate = DateTime.Now;
 List<ExSerializeJson> productList = new List<ExSerializeJson>();
 
-ExSerializeJson product1 = new ExSerializeJson(2525, "SSD", 480.50M);
-ExSerializeJson product2 = new ExSerializeJson(2525, "Placa de Video", 1980.50M);
-ExSerializeJson product3 = new ExSerializeJson(2525, "Monitor", 2580.50M);
-ExSerializeJson product4 = new ExSerializeJson(2525, "Processador", 1970.20M);
+ExSerializeJson product1 = new ExSerializeJson(2525, "SSD", 480.50M, currentDate);
+ExSerializeJson product2 = new ExSerializeJson(2525, "Placa de Video", 1980.50M, currentDate);
+ExSerializeJson product3 = new ExSerializeJson(2525, "Monitor", 2580.50M, currentDate);
+ExSerializeJson product4 = new ExSerializeJson(2525, "Processador", 1970.20M, currentDate);
 
 productList.Add(product1);
 productList.Add(product2);
@@ -84,4 +85,13 @@ string serialize = JsonConvert.SerializeObject(productList, Formatting.Indented)
 
 File.WriteAllText("Archives/sales.json", serialize);
 
-Console.WriteLine(serialize);
+
+string salesArchiveContent = File.ReadAllText("Archives/sales.json");
+
+List<ExDeserialize> exDeserializes = JsonConvert.DeserializeObject<List<ExDeserialize>>(salesArchiveContent);
+
+foreach(ExDeserialize item in exDeserializes)
+{
+    Console.WriteLine($"Id: {item.Id}, Product: {item.Product} " +
+        $"Price: {item.Price}, DateSale: {item.DateSale.ToString("dd/MM/yyyy HH:mm")}");
+}
