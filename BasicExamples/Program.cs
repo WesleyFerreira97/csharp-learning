@@ -24,3 +24,16 @@
 //namesStack.RemoveStack();
 
 //Console.WriteLine( namesStack.QueueContains("Morty Smith") );
+
+// Example Hashtable
+//ExHashtable person = new ExHashtable();
+//person.AddHash("888.555.444.32", "Wesley");
+//person.AddHash("888.555.444.32", "Wesley fail");
+//person.AddHash("888.555.444.31", "Wesley");
+//person.GetAllItems();
+//person.RemoveHash("888.555.444.31");
+//Console.WriteLine("Item Removido abaixo ↓↓");
+//person.GetAllItems();
+
+//bool checkContains = person.HashContains("888.555.444.32");
+//Console.WriteLine($"Contém Item {checkContains}");

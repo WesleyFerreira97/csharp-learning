@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,36 +8,42 @@ namespace BasicExamples.Examples
 {
     internal class ExHashtable
     {
-        string opa = "opa";
-        
-        //public void AddStack(string name)
-        //{
-        //    //nameStack.Push(name);
+        Hashtable people = new Hashtable();
 
-        //    Console.WriteLine($"Added : {name}");
-        //}
+        public void AddHash(string cpf, string name)
+        {
+            try
+            {
+                people.Add(cpf, name);
+                Console.WriteLine($"Added : {name}");
+            }
+            catch
+            {
+                Console.WriteLine("Element already exists");
+            }
 
-        //public void RemoveStack()
-        //{
-        //    string dequeueObject = nameStack.Pop();
+            
+        }
 
-        //    Console.WriteLine($"Removed : {dequeueObject}");
-        //}
+        public void RemoveHash(string removeKey)
+        {
+            people.Remove(removeKey);
+        }
 
-        //public void GetAllItems()
-        //{
-        //    foreach (var item in nameStack)
-        //    {
-        //        Console.WriteLine(item);
-        //    }
-        //}
+        public void GetAllItems()
+        {
+            foreach (DictionaryEntry item in people)
+            {
+                Console.WriteLine($"{item.Key} {item.Value}");
+            }
+        }
 
-        //public bool QueueContains(string itemName)
-        //{
-        //    bool itemContains = nameStack.Contains(itemName);
+        public bool HashContains(string itemKey)
+        {
+            bool itemContains = people.Contains(itemKey);
 
+            return itemContains;
+        }
 
-        //    return itemContains;
-        //}
     }
 }
