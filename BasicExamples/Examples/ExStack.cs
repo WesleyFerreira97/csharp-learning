@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace BasicExamples.Examples
 {
-    internal class ExQueue
+    internal class ExStack
     {
-        private Queue<string> nameQueue = new Queue<string>();
+        private Stack<string> nameStack= new Stack<string>();
         
-        public void AddQueue(string name)
+        public void AddStack(string name)
         {
-            nameQueue.Enqueue(name);
+            nameStack.Push(name);
 
-            Console.WriteLine($"Added {name}");
+            Console.WriteLine($"Added : {name}");
         }
 
-        public void RemoveQueue()
+        public void RemoveStack()
         {
-            string dequeueObject = nameQueue.Dequeue();
+            string dequeueObject = nameStack.Pop();
 
             Console.WriteLine($"Removed : {dequeueObject}");
         }
 
         public void GetAllItems()
         {
-            foreach (var item in nameQueue)
+            foreach (var item in nameStack)
             {
                 Console.WriteLine(item);
             }
@@ -34,8 +34,8 @@ namespace BasicExamples.Examples
 
         public bool QueueContains(string itemName)
         {
-            bool itemContains = nameQueue.Contains(itemName);
-            
+            bool itemContains = nameStack.Contains(itemName);
+
             return itemContains;
         }
     }
