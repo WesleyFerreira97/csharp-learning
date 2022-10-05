@@ -31,16 +31,16 @@ while (showMenu)
     switch (Console.ReadLine())
     {
         case "1":
-            currentParking.AddVehicle("Placa");
+            currentParking.AddVehicle(Console.ReadLine());
             break;
 
         //case "2":
         //    es.RemoverVeiculo();
         //    break;
 
-        //case "3":
-        //    es.ListarVeiculos();
-        //    break;
+        case "3":
+            currentParking.GetAllVehicles();
+            break;
 
         //case "4":
         //    exibirMenu = false;
