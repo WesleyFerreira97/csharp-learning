@@ -7,14 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicExamples", "BasicExamp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParkingProject", "ParkingProject\ParkingProject.csproj", "{A788027C-30F7-4469-8106-27DF1436A6E3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FA9DDAFA-B21C-42A3-AF41-6ECDD23050B8}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingProject", "BookingProject\BookingProject.csproj", "{52AC2296-A599-480B-8CF3-CF11ABE25B39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartphoneProject", "SmartphoneProject\SmartphoneProject.csproj", "{F12F4129-977F-4E31-B600-CCE7862ECCC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartphoneProject", "SmartphoneProject\SmartphoneProject.csproj", "{F12F4129-977F-4E31-B600-CCE7862ECCC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
