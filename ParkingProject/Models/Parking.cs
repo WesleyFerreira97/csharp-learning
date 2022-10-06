@@ -9,8 +9,8 @@ namespace ParkingProject.Models
 {
     internal class Parking
     {
-        private decimal _initialPrice;
-        private decimal _pricePerHour;
+        private decimal initialPrice;
+        private decimal pricePerHour;
         List<ParkingSpace> listVehicles = new List<ParkingSpace>();
 
         public Parking(decimal initialPrice, decimal pricePerHour)
@@ -21,18 +21,18 @@ namespace ParkingProject.Models
 
         public decimal InitialPrice
         {
-            get => _initialPrice;
+            get => initialPrice;
             set
             {
-                _initialPrice = value;
+                initialPrice = value;
             }
         }
         public decimal PricePerHour
         {
-            get => _initialPrice;
+            get => pricePerHour;
             set
             {
-                _initialPrice = value;
+                pricePerHour = value;
             }
         }
 
@@ -47,27 +47,47 @@ namespace ParkingProject.Models
                 patternMercosul.IsMatch(plateSanitize)
                 )
             {
-                Console.WriteLine("Esta dentro do padrão");
-            }
-            //if (vehiclePlate.Length > 3 && vehiclePlate.Length < 10)
-            //{
-            //    DateTime currentTime = DateTime.Now;
-            //    ParkingSpace newVehicle = new ParkingSpace(vehiclePlate, currentTime);
-            //    listVehicles.Add(newVehicle);
-            //    Console.WriteLine("Added Vehicle");
+                DateTime currentTime = DateTime.Now;
+                ParkingSpace newVehicle = new ParkingSpace(vehiclePlate, currentTime);
+                listVehicles.Add(newVehicle);
 
-            //} else
-            //{
-            //    Console.WriteLine("Placa adicionada inválida");
-            //}
+                Console.WriteLine("Veículo Adicionado!");
+            } else
+            {
+                Console.WriteLine("Por favor, insira uma placa no padrão correto!");
+            }
+        }
+
+        public void RemoveVehicle(int vehicleNumber)
+        {
+            ParkingSpace selectedVehicle = listVehicles.ElementAt(vehicleNumber);
+            DateTime initialHourParked = selectedVehicle.hourParked;
+            DateTime currentTime = DateTime.Now;
+
+            // Math abs - Retorna o valor absoluto evitando valores negativos
+            double pastHours = Math.Abs((initialHourParked - currentTime).TotalSeconds);
+
+            // Calcula a cada 10 segundos uma cobrança
+            int times = (int)pastHours / 10;
+            decimal total = initialPrice + (times * pricePerHour);
+            Console.WriteLine($"Valor a pagar : R${total}");
+
+            try
+            {
+                listVehicles.RemoveAt(vehicleNumber);
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err);
+
+            }
         }
 
         public void GetAllVehicles()
         {
-            foreach(var vehicle in listVehicles)
+            for(int i = 0; i < listVehicles.Count; i++)
             {
-                Console.WriteLine($"Placa do veículo : {vehicle.vehiclePlate}");
-                Console.WriteLine($"Hora estacionado : {vehicle.hourParked}");
+                Console.WriteLine($"{i}: {listVehicles[i].vehiclePlate}");
             }
         }
     }

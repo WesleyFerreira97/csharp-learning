@@ -34,17 +34,19 @@ while (showMenu)
             currentParking.AddVehicle(Console.ReadLine());
             break;
 
-        //case "2":
-        //    es.RemoverVeiculo();
-        //    break;
+        case "2":
+            int selectVehicle = int.Parse(Console.ReadLine());
+            currentParking.RemoveVehicle(selectVehicle);
+
+            break;
 
         case "3":
             currentParking.GetAllVehicles();
             break;
 
-        //case "4":
-        //    exibirMenu = false;
-        //    break;
+        case "4":
+            showMenu = false;
+            break;
 
         default:
             Console.WriteLine("Opção inválida");
