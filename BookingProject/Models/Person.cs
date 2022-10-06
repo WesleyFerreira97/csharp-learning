@@ -8,8 +8,8 @@ namespace BookingProject.Models
 {
     internal class Person
     {
-        string name;
-        string lastName;
+        private string name = string.Empty;
+        private string lastName = string.Empty;
 
         public Person(string name, string lastName)
         {
@@ -17,7 +17,7 @@ namespace BookingProject.Models
             LastName = lastName;
         }
 
-        string Name
+        public string Name
         {
             get => name;
             set
@@ -25,7 +25,7 @@ namespace BookingProject.Models
                 name = value;
             }
         }
-        string LastName
+        public string LastName
         {
             get => lastName;
             set
