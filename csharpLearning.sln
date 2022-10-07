@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingProject", "BookingPr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartphoneProject", "SmartphoneProject\SmartphoneProject.csproj", "{F12F4129-977F-4E31-B600-CCE7862ECCC5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiBasicExample", "Api-basic\ApiBasicExample.csproj", "{A95B947E-1C95-4DCE-B9F3-E1BA6B2DB0DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F12F4129-977F-4E31-B600-CCE7862ECCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F12F4129-977F-4E31-B600-CCE7862ECCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F12F4129-977F-4E31-B600-CCE7862ECCC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A95B947E-1C95-4DCE-B9F3-E1BA6B2DB0DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95B947E-1C95-4DCE-B9F3-E1BA6B2DB0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95B947E-1C95-4DCE-B9F3-E1BA6B2DB0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95B947E-1C95-4DCE-B9F3-E1BA6B2DB0DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
